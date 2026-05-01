@@ -1,3 +1,4 @@
+<?php $page = basename($_SERVER['PHP_SELF']); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,12 +56,14 @@
       <ul class="d-flex align-items-center">
 
         <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <a class="nav-link nav-icon search-bar-toggle " href="user-profil.html">
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown">
+
+         
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
@@ -132,6 +135,7 @@
 
         <li class="nav-item dropdown">
 
+          
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               You have 3 new messages
@@ -195,7 +199,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -254,45 +258,49 @@
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+    <!-- Dashboard -->
+    <li class="nav-item">
+      <a class="nav-link <?= ($page == 'index.php') ? '' : 'collapsed' ?>" href="index.php">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-speedometer2"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+    <!-- Kategori Produk -->
+    <li class="nav-item">
+      <a class="nav-link <?= ($page == 'kategori produk.php') ? '' : 'collapsed' ?>" href="kategori produk.php">
+        <i class="bi bi-tags"></i>
+        <span>Kategori Produk</span>
+      </a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-tags"></i>
-          <span>Kategori Produk</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
+    <!-- Data Produk -->
+    <li class="nav-item">
+      <a class="nav-link <?= ($page == 'data_produk.php') ? '' : 'collapsed' ?>" href="data_produk.php">
+        <i class="bi bi-box"></i>
+        <span>Data Produk</span>
+      </a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-box"></i>
-          <span>Data Produk</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
+    <!-- Laporan -->
+    <li class="nav-item">
+      <a class="nav-link <?= ($page == 'laporan.php') ? '' : 'collapsed' ?>" href="laporan.php">
+        <i class="bi bi-bar-chart-line"></i>
+        <span>Laporan</span>
+      </a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-bar-chart-line"></i>
-          <span>Laporan</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
+    <!-- Manajemen User -->
+    <li class="nav-item">
+      <a class="nav-link <?= ($page == 'user.php') ? '' : 'collapsed' ?>" href="user.php">
+        <i class="bi bi-people"></i>
+        <span>Manajemen User</span>
+      </a>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Manajemen User</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-    </ul>
+  </ul>
 
   </aside><!-- End Sidebar-->
 
