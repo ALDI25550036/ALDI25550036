@@ -30,7 +30,17 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  
+  <style>
+#main {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+}
+
+.pagetitle {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+</style>
 </head>
 
 <body>

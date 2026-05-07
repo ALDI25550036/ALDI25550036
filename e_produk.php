@@ -116,7 +116,7 @@ if (isset($_POST['update'])) {
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>WIBY PRATAMA</h6>
+              <h6>ALDI25550036</h6>
               <span>Admin</span>
             </li>
             <li>

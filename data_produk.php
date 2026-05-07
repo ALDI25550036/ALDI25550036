@@ -140,7 +140,7 @@
       </li><!-- End Laporan Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users.php">
+        <a class="nav-link collapsed" href="user.php">
           <i class="bi bi-people"></i>
           <span>Manajemen User</span>
         </a>
