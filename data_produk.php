@@ -55,7 +55,7 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>WIBY PRATAMA</h6>
+              <h6>ALDI25550036</h6>
               <span>Admin</span>
             </li>
             <li>
@@ -238,7 +238,7 @@ LEFT JOIN categories c ON p.category_id = c.id
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>WIBY</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>ALDI25550036</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
