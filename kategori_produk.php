@@ -29,6 +29,17 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+#main {
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+}
+
+.pagetitle {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+</style>
 
   
 </head>
@@ -111,7 +122,7 @@
 
   </header><!-- End Header -->
 
-<i class="bi bi-list toggle-sidebar-btn"></i>
+
     </div><!-- End Logo -->
 
     <nav class="header-nav ms-auto">
@@ -231,7 +242,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1></h1>Kategori Produk
+      <h1>Kategori Produk</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
