@@ -1,3 +1,4 @@
 <?php
-$conn = mysql_connnect("localhosl","root"","25550036");
-/>
+$conn = mysqli_connect("localhost", "root", "", "punya aldi");
+
+?>
