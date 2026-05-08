@@ -277,7 +277,6 @@
                     <th scope="col">No</th>
                     <th scope="col">Kode Kategori</th>
                     <th scope="col">Kategori produk</th>
-                    <th scope="col">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>

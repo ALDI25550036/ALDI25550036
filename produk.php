@@ -55,8 +55,8 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>WIBY PRATAMA</h6>
-              <span>Admin</span>
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -182,6 +182,7 @@
                   <tr>
                     <th scope="col">No</th>
                     <th scope="col">Kode Produk</th>
+                    <th scope="col">Nama Produk</th>
                     <th scope="col">Kategori</th>
                     <th scope="col">stok</th>
                     <th scope="col">Harga</th>
@@ -191,13 +192,14 @@
                 </thead>
                 <tbody>
                  <?php
-                include "Koneksi.php";
+                include "koneksi.php";
                 $no = 1;
                 $sql = mysqli_query($conn, "
-SELECT p.*, c.category_name
-FROM products p
-LEFT JOIN categories c ON p.category_id = c.id
-");
+                    SELECT p.*, c.category_name
+                    FROM products p
+                    LEFT JOIN categories c
+                    ON p.category_id = c.id
+                ");
 
                 while ($data = mysqli_fetch_array($sql)) {
                 ?>
@@ -207,18 +209,13 @@ LEFT JOIN categories c ON p.category_id = c.id
                   <td><?php echo $data['product_name']; ?></td>
                   <td><?php echo $data['category_name']; ?></td>
                   <td><?php echo $data['stock']; ?></td>
-                  <td>Rp <?php echo number_format($data['price'],0,
-                  ',','.'); ?></td>
+                  <td>Rp <?php echo number_format($data['price'],0,',','.'); ?></td>
                   <td>
-                    <img src="produk_img/<?php echo $data
-                    ['gambar']; ?>" width="60">
+                    <img src="produk_img/<?php echo $data['gambar']; ?>" width="50" class="rounded">
                   </td>
                   <td>
-                    <a href="e_produk.php?id=<?php echo $data
-                    ['id']; ?>" class="btn btn-warning">Edit</a>
-                    <a href="h_produk.php?id=<?php echo $data
-                    ['id']; ?>" class="btn btn-danger" 
-                    onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</a>
+                    <a href="e_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="h_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?')">Hapus</a>
                   </td>
                 </tr>
                 <?php } ?>
@@ -238,14 +235,14 @@ LEFT JOIN categories c ON p.category_id = c.id
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>WIBY</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>ALDI25550036</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="#">faiz</a>
     </div>
   </footer><!-- End Footer -->
 
