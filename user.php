@@ -1,4 +1,3 @@
-<?php 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -227,7 +226,7 @@
 
     <!-- Manajemen User -->
     <li class="nav-item">
-      <a class="nav-link <?= ($page == 'user.php') ? '' : 'collapsed' ?>" href="user.php">
+      <a class="nav-link <?= ($page == 'users.php') ? '' : 'collapsed' ?>" href="users.php">
         <i class="bi bi-person-circle"></i>
         <span>Manajemen User</span>
       </a>
@@ -245,7 +244,7 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-          <li class="breadcrumb-item active">manajemen user</li>
+          <li class="breadcrumb-item active">manajemen users</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
