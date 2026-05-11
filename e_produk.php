@@ -44,9 +44,9 @@ if (isset($_POST['update'])) {
             category_id = '$id_kategori',
             product_name = '$nm_produk',
             stock = '$stok',
-            min_stock = '$min_stok'
-            price = '$harga',
-            WHERE id = 'id'
+            min_stock = '$min_stok',
+            price = '$harga'
+            WHERE id = '$id'
          ");
     }
     if ($update) {
