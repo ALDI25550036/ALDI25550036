@@ -1977,3 +1977,11 @@
 [Mon May 11 10:18:10.252844 2026] [:error] [pid 16404:tid 2040] [client ::1:63067] PHP Notice:  Undefined variable: page in C:\\xampp007\\htdocs\\ALDI25550036\\user.php on line 213, referer: http://localhost/ALDI25550036/data_produk.php
 [Mon May 11 10:18:10.252844 2026] [:error] [pid 16404:tid 2040] [client ::1:63067] PHP Notice:  Undefined variable: page in C:\\xampp007\\htdocs\\ALDI25550036\\user.php on line 221, referer: http://localhost/ALDI25550036/data_produk.php
 [Mon May 11 10:18:10.253353 2026] [:error] [pid 16404:tid 2040] [client ::1:63067] PHP Notice:  Undefined variable: page in C:\\xampp007\\htdocs\\ALDI25550036\\user.php on line 229, referer: http://localhost/ALDI25550036/data_produk.php
+[Mon May 11 10:46:11.390428 2026] [ssl:warn] [pid 1688:tid 696] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon May 11 10:46:11.433413 2026] [core:warn] [pid 1688:tid 696] AH00098: pid file C:/xampp007/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon May 11 10:46:11.490365 2026] [ssl:warn] [pid 1688:tid 696] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon May 11 10:46:11.607183 2026] [mpm_winnt:notice] [pid 1688:tid 696] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Mon May 11 10:46:11.607183 2026] [mpm_winnt:notice] [pid 1688:tid 696] AH00456: Apache Lounge VC11 Server built: Dec 20 2016 13:02:04
+[Mon May 11 10:46:11.607183 2026] [core:notice] [pid 1688:tid 696] AH00094: Command line: 'c:\\xampp007\\apache\\bin\\httpd.exe -d C:/xampp007/apache'
+[Mon May 11 10:46:11.607183 2026] [mpm_winnt:notice] [pid 1688:tid 696] AH00418: Parent: Created child process 19488
+[Mon May 11 10:46:12.349280 2026] [ssl:warn] [pid 19488:tid 724] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
