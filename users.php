@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>users - ALDI25550036</title>
+  <title>Manajemen Users - ALDI25550036</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,23 +28,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <style>
-#main {
-    margin-top: 10px !important;
-    padding-top: 10px !important;
-}
-
-.pagetitle {
-    margin-top: 0px !important;
-    padding-top: 0px !important;
-}
-</style>
 </head>
 
 <body>
 
-<!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
@@ -55,15 +43,13 @@
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
+
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
-
-
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -120,134 +106,69 @@
 
   </header><!-- End Header -->
 
-  <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
-      </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-<!-- ======= Sidebar ======= -->
+  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
-  <ul class="sidebar-nav" id="sidebar-nav">
 
-    <!-- Dashboard -->
-    <li class="nav-item">
-      <a class="nav-link <?= ($page == 'index.php') ? '' : 'collapsed' ?>" href="index.php">
-       <i class="bi bi-houses-fill"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-    <!-- Kategori Produk -->
-    <li class="nav-item">
-      <a class="nav-link <?= ($page == 'kategori_produk.php') ? '' : 'collapsed' ?>" href="kategori_produk.php">
-        <i class="bi bi-bag-heart-fill"></i>
-        <span>Kategori Produk</span>
-      </a>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.php">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori_produk.php">
+          <i class="bi bi-tags"></i>
+          <span>Kategori Produk</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
 
-    <!-- Data Produk -->
-    <li class="nav-item">
-      <a class="nav-link <?= ($page == 'data_produk.php') ? '' : 'collapsed' ?>" href="data_produk.php">
-        <i class="bi bi-window-stack"></i>
-        <span>Data Produk</span>
-      </a>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produk.php">
+          <i class="bi bi-box-seam"></i>
+          <span>Data Produk</span>
+        </a>
+      </li><!-- End Data Produk Page Nav -->
 
-    <!-- Laporan -->
-    <li class="nav-item">
-      <a class="nav-link <?= ($page == 'laporan.php') ? '' : 'collapsed' ?>" href="laporan.php">
-        <i class="bi bi-book"></i>
-        <span>Laporan</span>
-      </a>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="laporan.php">
+          <i class="bi bi-bar-chart-line"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Laporan Page Nav -->
 
-    <!-- Manajemen User -->
-    <li class="nav-item">
-      <a class="nav-link <?= ($page == 'users.php') ? '' : 'collapsed' ?>" href="users.php">
-        <i class="bi bi-person-circle"></i>
-        <span>Manajemen User</span>
-      </a>
-    </li>
-
-  </ul>
+      <li class="nav-item">
+        <a class="nav-link " href="users.php">
+          <i class="bi bi-people"></i>
+          <span>Manajemen User</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+    </ul>
 
   </aside><!-- End Sidebar-->
-
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Manajeman User</h1>
+      <h1>Manajemen User</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-          <li class="breadcrumb-item active">manajemen users</li>
+          <li class="breadcrumb-item active">Manajemen Users</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div clas="card">
+          <div class="card-body mt-3">
+            <a href="t_user.php" class="btn btn-primary">Tambah Data </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="section">
       <div class="row">
@@ -255,8 +176,6 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Datatables</h5>
-              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
@@ -268,17 +187,16 @@
                     <th>Role</th>
                     <th>Status</th>
                     <th>Dibuat</th>
-                    <th>Aksi</th>  
-                    </th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbod>
+                <tbody>
                   <?php
                   include "koneksi.php";
                   $no = 1;
                   $sql = mysqli_query($conn, "SELECT * FROM users");
                   while ($data = mysqli_fetch_array($sql)) {
-                    ?>
+                  ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $data['name']; ?></td>
@@ -293,21 +211,21 @@
                           echo '<span class="badge bg-danger">Nonaktif</span>';
                         }
                         ?>
-                        </td>
+                      </td>
 
-                        <td><?php echo date('d-m-Y H:i', strtotime($data['created_at'])); ?></td>
+                      <td><?php echo date('d-m-Y H:i', strtotime($data['created_at'])); ?></td>
 
-                        <td>
-                          <a href="e_user.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">edit</a>
-                          <a href="h_user.php?id=<?php echo $data['id']; ?>" 
+                      <td>
+                        <a href="e_user.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="h_user.php?id=<?php echo $data['id']; ?>"
                           class="btn btn-danger btn-sm"
-                          onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')">
-                          Hapus
-                        </a>
-                        </td>
-                      </tr>
-                    <?php } ?>
-                  </tbody>
+                          onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')">Hapus</a>
+                      </td>
+                    </tr>
+                  <?php } ?>
+                </tbody>
+
+                </tbody>
               </table>
               <!-- End Table with stripped rows -->
 
@@ -317,6 +235,7 @@
         </div>
       </div>
     </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

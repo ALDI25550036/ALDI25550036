@@ -149,9 +149,9 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="user.php">
+        <a class="nav-link collapsed" href="users.php">
           <i class="bi bi-people"></i>
-          <span>Manajemen user</span>
+          <span>Manajemen User</span>
         </a>
       </li><!-- End Register Page Nav -->
 
