@@ -44,7 +44,7 @@ $html = '
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laporan Stok Minimum</title>
+    <title>LAPORAN STOK MINIMUM</title>
     <style>
         body { font-family: sans-serif; }
         h1 { text-align: center; color: #262626; margin-bottom: 5px; }
