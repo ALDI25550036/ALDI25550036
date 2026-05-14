@@ -284,7 +284,7 @@ $total_stok_kritis = mysqli_num_rows(mysqli_query(
         <div class="d-flex justify-content-between align-items-center">
           <span class="fw-bold text-primary">Total Item: <?= $total_item; ?></span>
           <a href="laporan_stok.php" class="btn btn-sm btn-primary" target="_blank">
-            Lihat Produk
+            Lihat laporan
             </a>
           </div>
          </div>

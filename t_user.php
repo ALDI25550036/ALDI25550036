@@ -16,6 +16,7 @@ if (isset($_POST['simpan'])) {
         exit;
     }
 
+    
     // hash password
     if (!empty($password)) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
