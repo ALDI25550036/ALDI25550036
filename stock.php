@@ -1,44 +1,55 @@
 <?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<?php
 include "koneksi.php";
 
 if (isset($_POST['submit'])) {
 
-    $product_id = $_POST['product_id'];
-    $change_type = $_POST['change_type'];
-    $qty = intval($_POST['qty']);
-    $note = $_POST['note'];
-    $user_id = $_SESSION['user_id'];
+  $product_id = $_POST['product_id'];
+  $change_type = $_POST['change_type'];
+  $qty = intval($_POST['qty']);
+  $note = $_POST['note'];
+  $user_id = $_SESSION['user_id'];
 
-    // ambil stok sekarang
-    $q = mysqli_query($conn, "SELECT stock FROM products WHERE id='$product_id'");
-    $data = mysqli_fetch_assoc($q);
+  // ambil stok sekarang
+  $q = mysqli_query($conn, "SELECT stock FROM products WHERE id='$product_id'");
+  $data = mysqli_fetch_assoc($q);
 
-    $stock_before = $data['stock'];
+  $stock_before = $data['stock'];
 
-    // hitung stok baru
-    if ($change_type == "ADD") {
-        $stock_after = $stock_before + $qty;
-    } else {
-        $stock_after = $stock_before - $qty;
+  // hitung stok baru
+  if ($change_type == "ADD") {
+    $stock_after = $stock_before + $qty;
+  } else {
+    $stock_after = $stock_before - $qty;
 
-        if ($stock_after < 0) {
-            echo "<script>alert('Stok tidak cukup!');</script>";
-            exit;
-        }
+    if ($stock_after < 0) {
+      echo "<script>alert('Stok tidak cukup!');</script>";
+      exit;
     }
+  }
 
-    // update stok
-    mysqli_query($conn, "UPDATE products SET stock='$stock_after' WHERE id='$product_id'");
+  // update stok
+  mysqli_query($conn, "UPDATE products SET stock='$stock_after' WHERE id='$product_id'");
 
-    // insert log
-    mysqli_query($conn, "INSERT INTO stock_logs
+  // insert log
+  mysqli_query($conn, "INSERT INTO stock_logs
         (product_id, change_type, qty, stock_before, stock_after, note, created_by)
         VALUES
         ('$product_id','$change_type','$qty','$stock_before','$stock_after','$note','$user_id')
     ");
 
-    header("Location: stock.php?success=1");
-    exit;
+  header("Location: stock.php?success=1");
+  exit;
 }
 ?>
 <!DOCTYPE html>
@@ -95,69 +106,52 @@ if (isset($_POST['submit'])) {
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
+
         <li class="nav-item dropdown pe-3">
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          <a
+            class="nav-link nav-profile d-flex align-items-center pe-0"
+            href="#"
+            data-bs-toggle="dropdown">
+            <img
+              src="assets/img/profile-img.jpg"
+              alt="Profile"
+              class="rounded-circle" />
+          </a><!-- End Profile Image Icon -->
 
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>SUWANTI</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
+              <h6><?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'User'; ?></h6>
+              <span><?php echo isset($_SESSION['role']) ? $_SESSION['role'] : 'Role'; ?></span>
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
+              <hr class="dropdown-divider" />
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
             </li>
 
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
+          </ul>
+          <!-- End Profile Dropdown Items -->
+
+        </li>
+        <!-- End Profile Nav -->
 
       </ul>
-    </nav><!-- End Icons Navigation -->
+    </nav>
 
+    <!-- End Icons Navigation -->
   </header><!-- End Header -->
 
+
   <!-- ======= Sidebar ======= -->
-   <aside id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -169,14 +163,14 @@ if (isset($_POST['submit'])) {
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="kategori_produk.php">
-         <i class="bi bi-cart4"></i>
+          <i class="bi bi-cart4"></i>
           <span>Kategori Produk</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link " href="produk.php">
-         <i class="bi bi-book"></i>
+          <i class="bi bi-book"></i>
           <span>Data Produk</span>
         </a>
       </li><!-- End Data Produk Page Nav -->
@@ -322,19 +316,16 @@ if (isset($_POST['submit'])) {
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
+ <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIIP</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="" target="_blank">ALDI25550036</a>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

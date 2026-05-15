@@ -1,4 +1,15 @@
 <?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<?php
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 require_once 'vendor/paragonie/random_compat/lib/random.php';
@@ -192,4 +203,3 @@ $html .= '
 // Tampilkan ke PDF
 $mpdf->WriteHTML($html);
 $mpdf->Output('laporan_stok_barang.pdf', 'I');
-?>
