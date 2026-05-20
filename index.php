@@ -283,7 +283,6 @@ function waktu_lalu($datetime)
                       <span class="text-muted small pt-2 ps-1">Total Produk</span>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>

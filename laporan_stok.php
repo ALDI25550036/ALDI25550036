@@ -148,6 +148,7 @@ img {
             <th>Stok</th>
             <th>Min. Stok</th>
             <th>Status</th>
+            <th>Tanggal Dibuat</th>
         </tr>
     </thead>
 
