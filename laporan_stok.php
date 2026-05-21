@@ -17,11 +17,11 @@ require_once 'vendor/paragonie/random_compat/lib/random.php';
 // Koneksi database
 require_once('koneksi.php');
 
-function query($query)
+function query($sql)
 {
     global $conn;
 
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $sql);
 
     // Menampilkan error query jika gagal
     if (!$result) {
@@ -47,7 +47,8 @@ $data = query("
         p.stock,
         p.min_stock,
         p.price,
-        p.gambar
+        p.gambar,
+        p.created_at
     FROM products p
     LEFT JOIN categories c ON p.category_id = c.id
     ORDER BY p.product_name ASC
@@ -188,7 +189,8 @@ foreach ($data as $row) {
         <td class="text-right">' . $harga . '</td>
         <td class="text-center">' . $row['stock'] . '</td>
         <td class="text-center">' . $row['min_stock'] . '</td>
-        <td class="text-center">' . $status . '</td>
+        <td class="text-center">' . $status . '</td> 
+        <td class="text-center">' . date('d-m-Y H:i', strtotime($row['created_at'])) . '</td>
     </tr>
     ';
 }

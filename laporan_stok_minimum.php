@@ -5,10 +5,10 @@ require_once 'vendor/paragonie/random_compat/lib/random.php';
 // Koneksi database
 require_once('koneksi.php');
 
-function query($query)
+function query($sql)
 {
     global $conn;
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $sql);
 
     $rows = [];
     while ($row = mysqli_fetch_assoc($result)) {
@@ -28,7 +28,7 @@ $data = query("
         p.min_stock, 
         p.price, 
         p.gambar, 
-        p.CREATE_at
+        p.created_at
     FROM products p
     JOIN categories c ON p.category_id = c.id
     WHERE p.stock <= p.min_stock
@@ -107,7 +107,7 @@ foreach ($data as $row) {
                 <td class="text-center stok-minimum">' . $row['stock'] . '</td>
                 <td class="text-center">' . $row['min_stock'] . '</td>
                 <td class="text-center stok-minimum">Stok Minimum</td>
-                <td class="text-center">' . date('d-m-Y H:i', strtotime($row['CREATE_at'])) . '</td>
+                <td class="text-center">' . date('d-m-Y H:i', strtotime($row['created_at'])) . '</td>
             </tr>';
 }
 

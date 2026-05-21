@@ -86,7 +86,7 @@ $q_aktivitas = mysqli_query($conn, "
     LIMIT 5
 ");
 
-function waktu_lalu($datetime)
+function waktu_lalu(string $datetime)
 {
   $selisih = time() - strtotime($datetime);
 
