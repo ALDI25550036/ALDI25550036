@@ -159,7 +159,7 @@ if (isset($_POST['simpan'])) {
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="produk.php">
+                <a class="nav-link collapsed" href="data_produk.php">
                     <i class="bi bi-question-circle"></i>
                     <span>Data_Produk</span>
                 </a>

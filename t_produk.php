@@ -167,7 +167,7 @@ if (isset($_POST['simpan'])) {
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link " href="produk.php">
+                <a class="nav-link " href="data_produk.php">
                     <i class="bi bi-box-seam"></i>
                     <span>Data Produk</span>
                 </a>
@@ -197,7 +197,7 @@ if (isset($_POST['simpan'])) {
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="produk.php">Data Produk</a></li>
+                    <li class="breadcrumb-item"><a href="data_produk.php">Data Produk</a></li>
                     <li class="breadcrumb-item active">Tambah</li>
                 </ol>
             </nav>
