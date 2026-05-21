@@ -1,14 +1,24 @@
 <?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+<?php
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'vendor/paragonie/random_compat/lib/random.php';
+
 // Koneksi database
 require_once('koneksi.php');
 
-function query($sql)
+function query($query)
 {
     global $conn;
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $query);
 
     $rows = [];
     while ($row = mysqli_fetch_assoc($result)) {
@@ -34,7 +44,7 @@ $data = query("
     JOIN products p ON sl.product_id = p.id
     JOIN categories c ON p.category_id = c.id
     LEFT JOIN users u ON sl.created_by = u.id
-    WHERE sl.change_type = 'ADD'
+    WHERE sl.change_type = 'REDUCE'
     ORDER BY sl.created_at DESC
 ");
 
