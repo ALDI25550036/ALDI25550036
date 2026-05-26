@@ -186,21 +186,19 @@ if (!isset($_SESSION["login"])) {
   <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <!-- Dashboard -->
       <li class="nav-item">
-        <a class="nav-link <?= ($page == 'index.php') ? '' : 'collapsed' ?>" href="index.php">
-          <i class="bi bi-houses-fill"></i>
+        <a class="nav-link collapsed" href="index.php">
+          <i class="bi bi-speedometer2"></i>
           <span>Dashboard</span>
         </a>
-      </li>
+      </li><!-- End Dashboard Nav -->
 
       <!-- Kategori Produk -->
       <li class="nav-item">
-        <a class="nav-link <?= ($page == 'kategori_produk.php') ? '' : 'collapsed' ?>" href="kategori_produk.php">
-          <i class="bi bi-bag-heart-fill"></i>
+        <a class="nav-link collapsed" href="kategori_produk.php">
+          <i class="bi bi-tags"></i>
           <span>Kategori Produk</span>
         </a>
-      </li>
 
       <!-- Data Produk -->
       <li class="nav-item">

@@ -207,7 +207,7 @@ function waktu_lalu($datetime)
       <!-- Dashboard -->
       <li class="nav-item">
         <a class="nav-link <?= ($page == 'index.php') ? '' : 'collapsed' ?>" href="index.php">
-          <i class="bi bi-houses-fill"></i>
+          <i class="bi bi-speedometer2"></i>
           <span>Dashboard</span>
         </a>
       </li>
@@ -223,7 +223,7 @@ function waktu_lalu($datetime)
       <!-- Data Produk -->
       <li class="nav-item">
         <a class="nav-link <?= ($page == 'data_produk.php') ? '' : 'collapsed' ?>" href="data_produk.php">
-          <i class="bi bi-window-stack"></i>
+          <i class="bi bi-box2"></i>
           <span>Data Produk</span>
         </a>
       </li>
