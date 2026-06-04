@@ -156,9 +156,9 @@ if (!isset($_SESSION["login"])) {
     <div class="row">
       <div class="col-lg-12">
 
-        <div clas="card">
+        <div class="card">
           <div class="card-body mt-3">
-            <a href="t_user.php" class="btn btn-primary">Tambah Data </a>
+            <a href="t_kat.php" class="btn btn-primary">Tambah Data</a>
           </div>
         </div>
       </div>
